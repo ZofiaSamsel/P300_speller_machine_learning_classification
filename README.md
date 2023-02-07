@@ -64,7 +64,7 @@ The Pipeline to compare classification models against roc-auc was created. Steps
 
 3. Models: **Logistic Regression, KNN, SVC, Decision Tree**
 
-## Results:
+### Results:
 
 ![Przechwytywanie](https://user-images.githubusercontent.com/79842403/217223428-07870871-c63d-4f87-9980-cb44df10c615.PNG)
 
@@ -89,7 +89,7 @@ The Pipeline to compare classification models against roc-auc was created. Steps
 
 3. Models: **Logistic Regression, KNN, SVC, Decision Tree**
 
-## Results:
+### Results:
 
 ![Przechwytywanie](https://user-images.githubusercontent.com/79842403/217223867-e3bb1ad4-0d8a-4724-b7d7-22efee88eb59.PNG)
 
