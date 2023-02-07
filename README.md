@@ -23,10 +23,11 @@ Folder with the set made of 16 subjects who had gone through 5 sessions, for a t
 
 2) **TRAIN folder**: 
      * **ChannelsLocation.csv**: information for each channel to a topographical representation of multichannel EEG.
-     * **Data.zip** Set made of 16 subjects who had gone through 5 sessions, for a total of 80 Data_S*_Sess*.csv files. 60 feedbacks were provided in each session except the fifth one for which 100 feedbacks were provided.
      * **TrainLabels.csv**: the expected labels  for the training set.
 
 3) **grupa_p300_speller.ipynb**: the Colab notebook with the program.
+
+Folder with the raw data **train.zip** can download from the Kaggle website: https://www.kaggle.com/competitions/inria-bci-challenge/data (files are to big to upload it on Github).
 
 ## **Preprocessing** 
 
