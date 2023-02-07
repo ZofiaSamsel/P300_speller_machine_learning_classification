@@ -25,3 +25,72 @@ The goal of this challenge is to determine when the selected item is not the cor
 **TrainLabels.csv**: the expected labels  for the training set.
 
 **SampleSubmission.csv**: Sample submission file in the correct format
+
+## **Preprocessing** 
+
+1. EEG signal data were loaded and MNE info and MNE raw objects were created 
+
+2. Wrong channel names were changed (P08 -> PO8) 
+
+3. Type of placement of electrodes on the head, visualisation was selected 
+
+4. Signal filtered 
+
+5. Events, epochs created 
+
+6. Wrong epochs rejected 
+
+7. Eye artifacts removed
+
+## **How the signal was operationalized:** 
+
+The data were presented in the form of a table with an **'eeg'** column containing the MNE EpochArray and a **'labels'** column that specified whether it was a concordant trial (**1** - the person thought of the same letter as the one displayed) or a discordant trial (**0** - the letter displayed was different from the one the person should have thought of; we expect a P300 component here)
+
+## **Model 1**  
+
+X: 
+
+* Electrodes: 'Cz', 'Fz', 'Pz', 'PO7', 'PO8'. 
+* Time window: 150 - 450 ms 
+* Averaged timepoints on each channel 
+ 
+Y:
+* P300 occurred - 0 
+* P300 did not occur - 1 
+
+The Pipeline to compare classification models against roc-auc was created. Steps:
+
+1. Base steps: Scaler()  
+
+3. Models: **Logistic Regression, KNN, SVC, Decision Tree**
+
+## Results:
+
+![Przechwytywanie](https://user-images.githubusercontent.com/79842403/217223428-07870871-c63d-4f87-9980-cb44df10c615.PNG)
+
+![Przechwytywanie](https://user-images.githubusercontent.com/79842403/217223567-baa375ce-8516-45f1-9102-a29855f60641.PNG)
+
+
+## **Model 2 - with Feature Extraction**  
+
+X: 
+
+* Electrodes: 'Cz', 'Fz', 'Pz', 'PO7', 'PO8', 'FCz', 'CPz', 'P4', 'P3', 'P7', 'P8', 'FP2', 'FP1', 'C3', 'C4', 'FC3', 'FC4'. 
+* Time window: 150 - 450 ms 
+* Decimation  
+ 
+Y:
+* P300 occurred - 0 
+* P300 did not occur - 1 
+
+The Pipeline to compare classification models against roc-auc was created. Steps:
+
+1. Base steps: **UnsupervisedSpatialFilter (PCA(4)), Vectorizer(), Scaler()** 
+
+3. Models: **Logistic Regression, KNN, SVC, Decision Tree**
+
+## Results:
+
+![Przechwytywanie](https://user-images.githubusercontent.com/79842403/217223867-e3bb1ad4-0d8a-4724-b7d7-22efee88eb59.PNG)
+
+![Przechwytywanie](https://user-images.githubusercontent.com/79842403/217224003-20757dad-6890-4a43-a692-f7d0d62575da.PNG)
