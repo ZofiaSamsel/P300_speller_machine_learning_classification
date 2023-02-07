@@ -18,13 +18,15 @@ The goal of this challenge is to determine when the selected item is not the cor
 
 ## **File descriptions**
 
-**ChannelsLocation.csv**: information for each channel to a topographical representation of multichannel EEG.
+1) **FIFY folder**: 
+Folder with the set made of 16 subjects who had gone through 5 sessions, for a total of 80 Data_S*_Sess*.fif files. 60 feedbacks were provided in each session except the fifth one for which 100 feedbacks were provided. Data after the pre-processing.
 
-**train.zip**: Training set made of 16 subjects who had gone through 5 sessions, for a total of 80 Data_S*_Sess*.csv files. 60 feedbacks were provided in each session except the fifth one for which 100 feedbacks were provided.
+2) **train folder**: 
+     * **ChannelsLocation.csv**: information for each channel to a topographical representation of multichannel EEG.
+     * Set made of 16 subjects who had gone through 5 sessions, for a total of 80 Data_S*_Sess*.csv files. 60 feedbacks were provided in each session except the fifth one for which 100 feedbacks were provided.
+     * **TrainLabels.csv**: the expected labels  for the training set.
 
-**TrainLabels.csv**: the expected labels  for the training set.
-
-**SampleSubmission.csv**: Sample submission file in the correct format
+3) **grupa_p300_speller.ipynb**: the Colab notebook with the program.
 
 ## **Preprocessing** 
 
