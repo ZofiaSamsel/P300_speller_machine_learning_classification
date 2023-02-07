@@ -21,7 +21,7 @@ The goal of this challenge is to determine when the selected item is not the cor
 1) **FIFY folder**: 
 Folder with the set made of 16 subjects who had gone through 5 sessions, for a total of 80 Data_S*_Sess*.fif files. 60 feedbacks were provided in each session except the fifth one for which 100 feedbacks were provided. Data after the pre-processing.
 
-2) **train folder**: 
+2) **TRAIN folder**: 
      * **ChannelsLocation.csv**: information for each channel to a topographical representation of multichannel EEG.
      * Set made of 16 subjects who had gone through 5 sessions, for a total of 80 Data_S*_Sess*.csv files. 60 feedbacks were provided in each session except the fifth one for which 100 feedbacks were provided.
      * **TrainLabels.csv**: the expected labels  for the training set.
